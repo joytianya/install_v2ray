@@ -8,3 +8,8 @@ source <(curl -sL https://multi.netlify.app/v2ray.sh) --remove
 source <(curl -sL https://multi.netlify.app/v2ray.sh) --zh
 v2ray update v4.45.2
 v2ray update v4.45.2
+systemctl daemon-reload
+systemctl restart v2ray.service
+systemctl reset-failed v2ray.service
+systemctl status v2ray.service
+
